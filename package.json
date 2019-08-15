@@ -1,0 +1,36 @@
+{
+  "name": "transform-client",
+  "version": "1.0.0",
+  "author": "Charles PAULET",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": "cjs",
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-syntax-dynamic-import"
+    ]
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "transform.js": "file:../transform.js"
+  }
+}
