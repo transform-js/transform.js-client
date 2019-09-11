@@ -15,7 +15,7 @@ const test = async () => {
     bar: "BAR"
   };
 
-  const got = (await new Transform(src, "example", "test", "metrics")).format();
+  const got = (await new Transform().format(src, "test", "example", "metrics"));
 
   assert.deepStrictEqual(got, expected);
 
